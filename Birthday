@@ -1,0 +1,19 @@
+public class Love {
+
+	public static void main(String[] args) throws AWTException {
+		ChromeDriver driver=new ChromeDriver();
+		 driver.get("https://www.google.com/");
+		 driver.manage().window().maximize();
+		 driver.findElement(By.id("APjFqb")).sendKeys("Birthday wishes to husband");
+		 Robot r= new Robot();
+		 r.keyPress(KeyEvent.VK_ENTER);
+		 r.keyPress(KeyEvent.VK_ENTER);
+		 driver.findElement(By.xpath("//div[text()='Images']")).click();
+		 driver.findElement(By.xpath("(//div[@class='zbRPDe M2qv4b'])[1]")).click();
+		 
+		WebElement img = driver.findElement(By.id("ez-toc-container"));
+		Actions a=new Actions(driver);
+		a.scrollToElement(img).perform();
+}
+	}
+
